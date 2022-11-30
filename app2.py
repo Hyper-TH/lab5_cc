@@ -35,11 +35,10 @@ def add():
         return render_template("success.html")
 
 # Delete student
-@app.route("/delete", methods=['GET', 'POST']) #Add Student
+@app.route("/delete", methods=['GET', 'POST']) #Delete Student
 def delete():
     if request.method == "POST":
         name = request.form['studentName']
-        email = request.form['email']
         cursor = mysql.connection.cursor() #create a connection to the SQL instance
         cursor.execute('''DELETE FROM students WHERE studentName = %s''',(name)) # execute
         mysql.connection.commit()
@@ -56,7 +55,7 @@ def addPage():
 # Change to delete form html
 @app.route('/deletePage', methods=['GET', 'POST'])
 def deletePage():
-    return render_template("remove.html")
+    return render_template("delete.html")
 
 
 @app.route("/read", methods=['GET', 'POST']) #Default - Show Data
