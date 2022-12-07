@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'hypersapp2'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DFB4487723DF40C4B0B1F9462DA0B662 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E1C526CD14654A008F8087BCD3877469 }}
