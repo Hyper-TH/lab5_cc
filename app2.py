@@ -15,8 +15,11 @@ app.config['MYSQL_DB'] = 'student'
 app.config['MYSQL_HOST'] = 'localhost'
 mysql.init_app(app)
 
+@app.route('/')
+def home():
+    return render_template("index.html")
 
-# This is the home / index page
+# This is the home / index page (How to make this our starting point???)
 @app.route('/form', methods=['GET', 'POST'])
 def form():
     return render_template("index.html")
